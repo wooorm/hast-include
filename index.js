@@ -100,7 +100,11 @@ function attacher(processor) {
                  */
 
                 if (err) {
-                    file.warn('Could not import src: ' + err.message, node);
+                    file.warn(
+                        'Could not import src: ' + err.code +
+                        ': \'' + src + '\'',
+                        node
+                    );
 
                     count--;
                     one();

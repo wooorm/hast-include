@@ -66,7 +66,7 @@ test('include', function (t) {
     processor.process(toVFile.readSync(join('invalid', 'index.html')), function (err, file) {
         t.ifErr(err);
         t.deepEqual(file.messages.map(String), [
-            'test/fixtures/invalid/index.html:8:5-8:37: Could not import src: ENOENT: no such file or directory, open \'test/fixtures/invalid/invalid.html\''
+            'test/fixtures/invalid/index.html:8:5-8:37: Could not import src: ENOENT: \'test/fixtures/invalid/invalid.html\''
         ]);
     });
 
